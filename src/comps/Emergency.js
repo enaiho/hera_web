@@ -19,39 +19,39 @@ function Emergency(props){
 	const { triggerId } = useParams();
 
 
+	const getEmergencyDetails = (...args) => {
+
+
+		const [triggerId] = args;
+		
+
+		axios.get(`http://localhost:5000/emergency/${triggerId}`)
+		.then(function (response) {
+
+		    const { message,status,info } = response.data;
+		    if( status !== "retrieved" ) console.log(message);
+
+
+		    // console.log( message );
+		    // console.log( status );
+
+		    loadedData(false);
+		    setInstances( message );
+		    setInfo(info);
+		})
+		.catch(function (error) {
+
+		    console.log(error.message);
+		    console.log("error");
+		  
+		})
+
+	
+	}
+
 	useEffect( ()=> {
 
-
-		const getEmergencyDetails = (...args) => {
-
-
-			const [triggerId] = args;
-			
-
-			axios.get(`http://localhost:5000/emergency/${triggerId}`)
-			.then(function (response) {
-
-			    const { message,status,info } = response.data;
-			    if( status !== "retrieved" ) console.log(message);
-
-
-			    // console.log( message );
-			    // console.log( status );
-
-			    loadedData(false);
-			    setInstances( message );
-			    setInfo(info);
-			})
-			.catch(function (error) {
-
-			    console.log(error.message);
-			    console.log("error");
-			  
-			})
-
-		
-		}
-
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 		getEmergencyDetails(triggerId);
 
 	},[]);
