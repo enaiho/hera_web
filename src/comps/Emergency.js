@@ -9,7 +9,7 @@ import axios from 'axios';
 // import { io } from "socket.io-client";
 
 
-// https://solace-web.netlify.app
+// https://solace-dev.herokuapp.com
 
 
 function Emergency(props){
@@ -27,7 +27,7 @@ function Emergency(props){
 		const [triggerId] = args;
 		
 
-		axios.get(`http://localhost:5000/emergency/${triggerId}`)
+		axios.get(`https://solace-dev.herokuapp.com/emergency/${triggerId}`)
 		.then(function (response) {
 
 		    const { message,status,info } = response.data;
