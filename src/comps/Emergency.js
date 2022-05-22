@@ -18,11 +18,15 @@ function Emergency(props){
 	const [info, setInfo] = useState({});
 	const { triggerId } = useParams();
 
+			// eslint-disable-next-line react-hooks/exhaustive-deps
 
 	const getEmergencyDetails = (...args) => {
 
 
+				// eslint-disable-next-line react-hooks/exhaustive-deps
 		const [triggerId] = args;
+
+				// eslint-disable-next-line react-hooks/exhaustive-deps
 		
 
 		axios.get(`http://localhost:5000/emergency/${triggerId}`)
@@ -51,10 +55,13 @@ function Emergency(props){
 
 	useEffect( ()=> {
 
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 		getEmergencyDetails(triggerId);
 
-	},[]);
+
+	});
+
+
+
 
 
 
