@@ -22,13 +22,10 @@ function Emergency(props){
 	const getEmergencyDetails = (...args) => {
 
 
-
 		const [triggerId] = args;
-
-
 		
 
-		axios.get(`http://localhost:5000/emergency/${triggerId}`)
+		axios.get(`https://solace-web.netlify.app/emergency/${triggerId}`)
 		.then(function (response) {
 
 		    const { message,status,info } = response.data;
