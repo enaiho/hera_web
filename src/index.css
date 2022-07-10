@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+
+	font-family: "EuclidCircularABold";
+	src: local("EuclidCircularABold"),
+	 url("./fonts/euclid/EuclidCircularA-Bold.ttf") format("truetype");
+	font-weight: bold;
+}
+
+@font-face {
+
+	font-family: "EuclidCircularALight";
+	src: local("EuclidCircularALight"),
+	 url("./fonts/euclid/EuclidCircularA-Light.ttf") format("truetype");
+	font-weight: bold;
+}

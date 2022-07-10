@@ -1,0 +1,45 @@
+
+.user-name {
+
+}
+.label-emergency-msg{
+
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 600;
+	font-style: "normal";
+	font-family: "EuclidCircularABold";
+}
+.help-message{
+
+	width: 343px;
+	font-family: "EuclidCircularALight";
+	font-size: 14px;
+	line-height: 20px;
+	color:#03C108;
+	font-weight: 400;
+	height: 40px;
+
+
+}
+.span-line{
+	border-top: 1px solid #DFE4E8;
+	width: 100%;
+}
+.label-timeline-info{
+	font-family: "EuclidCircularALight";
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	color: #90979E;
+	margin-left: 10%;
+}
+.ul-timeline{
+	list-style-type: none;
+}
+.div-timeline-icon{
+	float:left;
+}
+.div-timeline{
+	margin-left:15%;
+}

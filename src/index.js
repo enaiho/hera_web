@@ -4,6 +4,11 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Emergency from './comps/Emergency';
+import './fonts/euclid/EuclidCircularA-Bold.ttf';
+import './fonts/euclid/EuclidCircularA-Italic.ttf';
+import './fonts/euclid/EuclidCircularA-Light.ttf';
+
+
 import reportWebVitals from './reportWebVitals';
 
 
