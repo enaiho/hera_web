@@ -140,7 +140,7 @@ function Emergency(props){
 				<div className="row">
 
 
-					<div className="col-4"></div>
+
 					<div className="col-4 justify-content-center align-items-center">
 
 						<div className="col-lg-12 mt-2">
@@ -228,7 +228,7 @@ function Emergency(props){
 							</div>
 						</div>
 					</div>
-					<div className="col-4"></div>
+
 
 
 				</div>
