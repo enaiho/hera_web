@@ -1,5 +1,5 @@
 
-import React, {useState,useEffect} from 'react';
+import React, {useState,useEffect,useRef} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import '../Emergency.css'
@@ -13,7 +13,7 @@ import '../Emergency.css'
 function Emergency(props){
 
 
-
+	const initialRender = useRef(true);
 	const [isLoading,loadedData] = useState(true);
 	const [instances, setInstances] = useState([]);
 	const [info, setInfo] = useState({});
@@ -52,8 +52,11 @@ function Emergency(props){
 	}
 
 	useEffect( ()=> {
-		getEmergencyDetails(triggerId);
-	});
+		if( initialRender.current ){
+			getEmergencyDetails(triggerId);
+			initialRender.current = false;
+		}
+	}, [initialRender]);
 
 	const call = (phone) => {
 		window.location.href = `tel:${phone}`
