@@ -53,6 +53,7 @@ function Emergency(props){
 
 	useEffect( ()=> {
 		if( initialRender.current ){
+			console.log( `poll to the client` );
 			getEmergencyDetails(triggerId);
 			initialRender.current = false;
 		}
