@@ -56,7 +56,7 @@ function Emergency(props){
 			getEmergencyDetails(triggerId);
 			initialRender.current = false;
 		}
-	}, [initialRender]);
+	}, [initialRender,triggerId]);
 
 	const call = (phone) => {
 		window.location.href = `tel:${phone}`
